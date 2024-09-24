@@ -1,0 +1,103 @@
+/* 在這裡添加您的全局樣式 */
+body {
+    background-color: beige;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+hr {
+    width: 80%;
+    margin: 0 auto 4px;
+    /* 修改這裡，上邊距為0，下邊距為4px */
+    border: none;
+    border-top: 1px solid #333;
+}
+
+.container {
+    width: 60%;
+    /* 修改這裡，將寬度設置為60% */
+    margin: auto;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    width: 80%;
+    /* 修改這裡，將寬度設置為60% */
+
+    position: relative;
+    bottom: 0;
+    left: 10%;
+    /* 修改這裡，使footer居中 */
+    /* 添加這行，使footer居中 */
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.about-me {
+    text-align: left;
+}
+
+.copyright {
+    text-align: right;
+}
+
+/* 可以繼續添加更多全局樣式 */
+
+/* 在文件末尾添加以下內容 */
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: none;
+    transition: background-color 0.3s;
+}
+
+.back-to-top:hover {
+    background-color: #45a049;
+}
+
+.floating-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.floating-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    transition: background-color 0.3s;
+}
+
+.floating-button:hover {
+    background-color: #45a049;
+}

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/global.css">
     <title>CSS 語法</title>
 </head>
 
@@ -11,7 +12,7 @@
     <div>
         <h3>CSS基本語法</h3>
     </div>
-    <ol>
+    <ol class="container">
         <li>行內載入</li>
         <div>寫在元素標籤後面，原始的寫法，不易更改與維護。</div>
         <li>內部載入</li>
@@ -26,8 +27,27 @@
     </ol>
 
 
+
+
     <hr>
-    <a href="/">回首頁</a>
+    <div class="footer">
+        <div class="about-me">
+            <span>關於我</span>
+            <a href="https://www.youtube.com/@blood18star">YT</a>
+        </div>
+
+        <div class="copyright">
+            <p>Copyright &copy;2024 Jason Yen,All Rights Reserved.</p>
+            <p>Email:jasonyen199538@gmail.com</p>
+        </div>
+    </div>
+    <div class="floating-buttons">
+        <a href="#" class="floating-button" id="backToTop" title="回到頂部">↑</a>
+        <a href="/" class="floating-button" title="回首頁">🏠</a>
+        <a href="#" class="floating-button" id="copyUrl" title="複製網址">📋</a>
+    </div>
+
+    <script src="/static/global.js"></script>
 </body>
 
 </html>
