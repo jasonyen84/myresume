@@ -1,4 +1,6 @@
 from flask import Flask, render_template
+import requests
+import json
 
 app = Flask(__name__)
 
@@ -31,6 +33,18 @@ def get_css():
 @app.route("/js")
 def get_js():
     return render_template("js.html")
+
+@app.route('/pm25')
+def index():
+    # 从API获取数据
+    url = "https://data.moenv.gov.tw/api/v2/aqx_p_02?api_key=e8dd42e6-9b8b-43f8-991e-b3dee723a52d&limit=1000&sort=datacreationdate%20desc&format=JSON"
+    response = requests.get(url)
+    data = json.loads(response.text)
+    
+    # 提取记录
+    records = data['records']
+    
+    return render_template('pm25.html', records=records)
 
 
 # @app.route("/data/appinfo/str/<name>")

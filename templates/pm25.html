@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台灣PM2.5資料</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #333;
+            margin: 0;
+        }
+
+        .table-container {
+            width: 40%;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .home-link {
+            position: absolute;
+            right: 0;
+            top: -30px;
+        }
+
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>台灣PM2.5資料</h1>
+    </div>
+    <div class="table-container">
+        <a href="/" class="home-link">回首頁</a>
+        <table>
+            <tr>
+                <th>測站名稱</th>
+                <th>縣市名稱</th>
+                <th>細懸浮微粒濃度 (μg/m3)</th>
+                <th>資料建置日期</th>
+            </tr>
+            {% for record in records %}
+            <tr>
+                <td>{{ record.site }}</td>
+                <td>{{ record.county }}</td>
+                <td>{{ record.pm25 }}</td>
+                <td>{{ record.datacreationdate }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+
+</html>
